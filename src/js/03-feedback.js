@@ -15,7 +15,6 @@ function onFormInput() {
     inputValue,
     messageValue,
   };
-  console.log(formValue);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formValue));
 }
 
