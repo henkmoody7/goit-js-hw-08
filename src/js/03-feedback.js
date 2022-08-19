@@ -6,12 +6,15 @@ form.addEventListener('submit', onSubmit);
 
 function onFormInput(e) {
   const inputValue = e.currentTarget.elements.email.value;
+  console.log(inputValue);
   const messageValue = e.currentTarget.elements.message.value;
   const formValue = {
     inputValue,
     messageValue,
   };
-  localStorage.setItem('feedback-form-state', JSON.stringify(formValue));
+  if (formValue) {
+    localStorage.setItem('feedback-form-state', JSON.stringify(formValue));
+  }
 }
 
 function onSubmit(e) {
